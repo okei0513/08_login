@@ -1,4 +1,5 @@
 <?php
+//管理者のみ閲覧可能へ
 
 // DB接続情報
 include('functions.php'); // 関数を記述したファイルの読み込み
@@ -52,9 +53,9 @@ if ($status == false) {
     <title>登録一覧</title>
 </head>
 
-<body class="all_box">
+<body>
     <fieldset class="main_box">
-        <legend class="title">登録一覧</legend>
+        <h1>登録一覧</h1>
 
         <table class="table_box">
             <thead>
@@ -76,15 +77,6 @@ if ($status == false) {
 </body>
 
 <style>
-    .all_box {
-        background-color: #BBFFFF;
-        font-family: Verdana, "ＭＳ Ｐゴシック", sans-serif;
-        font-size: 100%;
-        margin-top: 100px;
-        padding: 0;
-        text-align: center;
-    }
-
     .main_box {
         border-color: #5D99FF;
         background-color: white;
@@ -92,27 +84,6 @@ if ($status == false) {
         text-align: center;
         margin: 0 auto;
 
-    }
-
-    .title {
-        position: relative;
-        background: #dfefff;
-        box-shadow: 0px 0px 0px 5px #dfefff;
-        border: dashed 2px white;
-        padding: 0.2em 0.5em;
-        color: #454545;
-        font-size: 35px;
-    }
-
-    .title:after {
-        position: absolute;
-        content: '';
-        left: -7px;
-        top: -7px;
-        border-width: 0 0 15px 15px;
-        border-style: solid;
-        border-color: #fff #fff #a8d4ff;
-        box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
     }
 
     .table_box {

@@ -7,19 +7,19 @@
     <title>ユーザー登録（入力画面）</title>
 </head>
 
-<body class="all_box">
+<body>
     <form action="user_create.php" method="POST">
         <fieldset class="main_box">
-            <legend class="title">ユーザー登録</legend>
+            <h1>新規登録</h1>
             <div class="main_box_text">
-                <div class="koumoku">
+                <div class="koumoku" id="usermei">
                     ユーザー名：<input type="text" name="username">
                 </div>
                 <div class="koumoku">
-                    会員ID：メールアドレス：<input type="text" name="mail">
+                    会員ID：<input type="text" name="mail" required="required" placeholder="Email Address">
                 </div>
-                <div>
-                    パスワード設定：<input type="text">
+                <div class="koumoku">
+                    パスワード：<input type="text">
                     <!-- パスワードは確認入力も作成したい！DB・一覧では更新日時のみ表示されパスワード事態は表示されないように設定予定 -->
                 </div>
                 <div class="koumoku">
@@ -82,7 +82,7 @@
                 </div>
 
                 <div class="koumoku">
-                    <button>送信</button>
+                    <button class="button">送信</button>
                 </div>
             </div>
             <a href="user_read.php">一覧画面</a>
@@ -91,51 +91,64 @@
 </body>
 
 <style>
-    .all_box {
-        background-color: #BBFFFF;
-        font-family: Verdana, "ＭＳ Ｐゴシック", sans-serif;
-        font-size: 100%;
-        margin-top: 100px;
+    /* Fonts */
+    @import url(https://fonts.googleapis.com/css?family=Open+Sans:400);
+
+    /* fontawesome */
+    @import url(http://weloveiconfonts.com/api/?family=fontawesome);
+
+    [class*="fontawesome-"]:before {
+        font-family: 'FontAwesome', sans-serif;
+    }
+
+    /* Simple Reset */
+    * {
+        margin: 0;
         padding: 0;
-
+        box-sizing: border-box;
     }
 
+    /* body */
+    body {
+        background: #e9e9e9;
+        color: #5e5e5e;
+        font: 400 87.5%/1.5em 'Open Sans', sans-serif;
+    }
+
+    /* Form Layout */
     .main_box {
-        border-color: #5D99FF;
-        background-color: white;
-        max-width: 650px;
+        background: #fafafa;
+        margin: 3em auto;
+        padding: 0 1em;
+        max-width: 370px;
+    }
+
+    h1 {
         text-align: center;
-        margin: 0 auto;
-    }
-
-    .main_box_text {
-        display: inline-block;
-        text-align: left;
-    }
-
-    .title {
-        position: relative;
-        background: #dfefff;
-        box-shadow: 0px 0px 0px 5px #dfefff;
-        border: dashed 2px white;
-        padding: 0.2em 0.5em;
-        color: #454545;
-        font-size: 35px;
-    }
-
-    .title:after {
-        position: absolute;
-        content: '';
-        left: -7px;
-        top: -7px;
-        border-width: 0 0 15px 15px;
-        border-style: solid;
-        border-color: #fff #fff #a8d4ff;
-        box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
+        padding: 1em 0;
     }
 
     .koumoku {
         padding: 10px 0 10px 0;
+    }
+
+    .button {
+        background-color: #FF9999;
+        border: none;
+        color: #fff;
+        cursor: pointer;
+        height: 40px;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 1em;
+        letter-spacing: 0.05em;
+        text-align: center;
+        text-transform: uppercase;
+        transition: background 0.3s ease-in-out;
+        width: 100%;
+    }
+
+    .button:hover {
+        background: #ee3e52;
     }
 </style>
 
