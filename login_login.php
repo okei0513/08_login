@@ -16,10 +16,10 @@
 
       <form>
         <div class="form-item">
-          会員ID: <input type="text" name="username" required="required" placeholder="Email Address">
+          会員ID: <input type="text" name="mail" required="required" placeholder="Email Address">
         </div>
         <div class="form-item">
-          パスワード: <input type="password" name="password" required="required" placeholder="Password">
+          パスワード: <input type="text" name="password" required="required" placeholder="Password">
         </div>
         <div class="button-panel">
           <button class="button">Sign In</button>

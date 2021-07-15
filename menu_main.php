@@ -16,13 +16,20 @@ check_session_id(); // idチェック関数の実行
 </head>
 
 <body>
-    <fieldset class="main_box">
-        <h1>メニュー画面</h1>
-        <h3>これから制作します！</h3>
+    <header>
+        <h3>登録情報</h3>
         <a href="login_logout.php">logout</a>
-    </fieldset>
-
+    </header>
+    <div class="main_box">
+        <ul class="flex-container">
+            <h3>サプリを探す</h3>
+            <li><a href="gazou_kensaku.php" class="link">画像検索</a></li>
+            <li><a href="nayami_list.php" class="link">悩みから探す</a></li>
+            <li><a href="eiyou_list.php" class="link">栄養から探す</a></li>
+        </ul>
+    </div>
 </body>
+
 <style>
     /* Fonts */
     @import url(https://fonts.googleapis.com/css?family=Open+Sans:400);
@@ -60,6 +67,45 @@ check_session_id(); // idチェック関数の実行
     h3 {
         text-align: center;
         padding: 1em 0;
+    }
+
+    li {
+        list-style: none;
+        background: #FF97C2;
+        color: #fff;
+        cursor: pointer;
+        padding: 16px;
+        margin: 8px;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 1.2em;
+        letter-spacing: 0.05em;
+        text-align: center;
+        text-transform: uppercase;
+        transition: background 0.3s ease-in-out;
+
+    }
+
+    /* ウィンドウサイズ768px以上で.flex-containerのdisplay:blockがdisplay:flex;で上書き */
+    .flex-container {
+        display: block;
+    }
+
+    @media screen and(min-width:768px) {
+        flex-container {
+            display: flex;
+        }
+    }
+
+
+    .link {
+        display: block;
+        text-decoration: none;
+
+    }
+
+    .link:hover {
+        font-weight: bold;
+        background-color: #FCF;
     }
 </style>
 
