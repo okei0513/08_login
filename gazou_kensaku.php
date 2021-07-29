@@ -9,11 +9,15 @@
 </head>
 
 <body>
-    <div class="main_box">
-        <li>カメラ起動</li>
-        <li>データフォルダ</li>
-    </div>
-
+    <form class="main_box" action="gazou_file_upload.php" method="POST" enctype="multipart/form-data">
+        <li>
+            <input type="file" name="upfile" accept="image/*" capture="camera">
+            <!--  capture="camera"でスマホの場合はカメラ起動-->
+        </li>
+        <div>
+            <button>submit</button>
+        </div>
+    </form>
 </body>
 
 <style>
@@ -40,6 +44,10 @@
         color: #5e5e5e;
         font: 400 87.5%/1.5em 'Open Sans', sans-serif;
     }
+
+    /* input[type="file"] {
+        display: none;
+    } */
 
     li {
         list-style: none;

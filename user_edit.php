@@ -61,7 +61,7 @@ if ($status == false) {
           <button class="button">送信</button>
         </div>
       </div>
-      <a href="user_read.php">一覧画面</a>
+      <!-- <a href="user_read.php">一覧画面</a> -->
       <!-- // idを見えないように送る.input type="hidden"を使用する！form内に以下を追加 -->
       <input type="hidden" name="id" value="<?= $record['id'] ?>">
       <!-- 更新のformは，登録と同じくpostで各値を送信しています！ -->

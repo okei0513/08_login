@@ -38,7 +38,7 @@
                     <button class="button">送信</button>
                 </div>
             </div>
-            <a href="user_read.php">一覧画面</a>
+            <!-- <a href="user_read.php">一覧画面</a> -->
         </fieldset>
     </form>
 

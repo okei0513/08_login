@@ -12,8 +12,7 @@ $todo_id = $_GET['todo_id'];
 // DB接続
 $pdo = connect_to_db();
 
-// $sql = 'INSERT INTO like_table(id, user_id, todo_id, created_at)VALUES(NULL, :user_id, :todo_id, sysdate())'; 
-// SQL作成
+// $sql = 'INSERT INTO like_table(id, user_id, todo_id, created_at)VALUES(NULL, :user_id, :todo_id, sysdate())';
 // いいね状態のチェック（COUNTで件数を取得できる！）
 $sql = "SELECT COUNT(*)FROM like_table WHERE user_id=:user_id AND todo_id=:todo_id";
 
